@@ -6,3 +6,13 @@ def isSubsequence(self, s, t):
                 seq += 1
             arr += 1
         return seq == len(s)
+
+
+def isValidSubsequence(array, sequence):
+    sequenceIndx = 0 # Creating an int variable to keep count of which inde
+    for i in array: # Iterating through our main array strating from the start
+		if sequenceIndx == len(sequence): # Compares out sequence index to the length of the subarray
+			break
+		elif sequence[sequenceIndx] == i:
+			sequenceIndx += 1
+    return sequenceIndx == len(sequence)
