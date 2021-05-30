@@ -1,7 +1,7 @@
 # https://www.algoexpert.io/questions/Class%20Photos
 def classPhotos(redShirtHeights, blueShirtHeights):
-    redShirtHeights.sort()
 	blueShirtHeights.sort()
+	redShirtHeights.sort()
 	
 	if redShirtHeights[0] > blueShirtHeights[0]:
 		for i in range(len(redShirtHeights)):
