@@ -1,3 +1,4 @@
+[Discussion Post (created on 23/7/2021 at 12:23)](https://leetcode.com/problems/valid-anagram/discuss/1421669/Python-Solution-using-HashmapDictionary-w-explanation)  
 <h2>242. Valid Anagram</h2><h3>Easy</h3><hr><div><p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> <em>if</em> <code>t</code> <em>is an anagram of</em> <code>s</code><em>, and</em> <code>false</code> <em>otherwise</em>.</p>
 
 <p>&nbsp;</p>
