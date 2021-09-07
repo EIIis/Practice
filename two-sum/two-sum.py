@@ -6,6 +6,16 @@ class Solution(object):
         :rtype: List[int]
         """
         
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] != target:
+                    continue
+                else:
+                    return [i, j]
+            
+                    
+        
+        """
         hashmap = {}
         
         for index, num in enumerate(nums):
@@ -15,3 +25,4 @@ class Solution(object):
             else:
                 hashmap[num] = index
         return []
+        """
