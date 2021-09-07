@@ -15,7 +15,6 @@ class Solution(object):
                     if [array[i], array[left], array[right]] in results:
                         left += 1
                         right -= 1
-                        continue
                     else:
                         results.append([array[i], array[left], array[right]])
                         left += 1
