@@ -15,4 +15,5 @@ class Solution(object):
             elif matrix[row][column] > target:
                 column -= 1
             else:
-                return [row, column]
+                return True
+        return False
