@@ -6,7 +6,7 @@ class Solution(object):
         """
         length = len(nums)
         i = 0
-        while i < length-1:
+        while i < length - 1:
             if nums[i] == nums[i+1]:
                 nums.remove(nums[i])
                 length -= 1
