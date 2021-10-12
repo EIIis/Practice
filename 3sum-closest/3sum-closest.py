@@ -11,12 +11,14 @@ class Solution(object):
         for i in range(len(nums)):
             left = i + 1
             right = len(nums) - 1
+            
             while left < right:
-                if nums[left] + nums[right] + nums[i] == target:
-                    return target
-                if abs(target - (nums[left] + nums[right] + nums[i])) < abs(target - closest):
-                    closest = nums[left] + nums[right] + nums[i]
-                if nums[left] + nums[right] + nums[i] < target:
+                close = nums[left] + nums[right] + nums[i]
+                if close == target:
+                    return close
+                elif abs(target - close) < abs(target - closest):
+                    closest = close
+                elif close < target:
                     left += 1
                 else:
                     right -= 1   
