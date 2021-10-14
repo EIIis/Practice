@@ -4,19 +4,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        
-        nums.sort()
-        nextVal = nums[0]
-        
-        if nextVal != 0:
-            return 0
-        else:
-            for num in nums:
-                if num == nextVal:
-                    nextVal += 1
-                else:
-                    return nextVal
-                
-            last = nums[len(nums) - 1] + 1
-            
-            return last
+        idx = 0
+
+        while idx < len(nums):
+            correct = nums[idx]
+            if nums[idx] < len(nums) and nums[idx] != nums[correct]:
+                nums[idx], nums[correct] = nums[correct], nums[idx]
+            else:
+                idx += 1
+  
+        for i in range(len(nums)):
+            if nums[i] != i:
+                return i
+  
+        return len(nums)
