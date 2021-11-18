@@ -5,24 +5,22 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        hmap = {}
-        
         if len(s) != len(t):
             return False
-    
+        allLetter = {}
+        
         for letter in s:
-            if not letter in hmap:
-                hmap[letter] = 1
+            if letter not in allLetter:
+                allLetter[letter] = 1
             else:
-                hmap[letter] += 1
-                
+                allLetter[letter] += 1
+        
         for letter in t:
-            if not letter in hmap:
+            if letter not in allLetter:
                 return False
             else:
-                hmap[letter] -= 1
-                if hmap[letter] == 0:
-                    del hmap[letter]
+                allLetter[letter] -= 1
+                if allLetter[letter] == 0:
+                    del allLetter[letter]
                     
-                
         return True
