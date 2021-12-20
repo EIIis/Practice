@@ -4,13 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
+
         if len(s) == 1:
             return False
         else:
             stack = []
-
             for char in s:
-                if (char == '{') or (char == '[') or (char == '('):
+                if char == '{' or char == '[' or char == '(':
                     stack.append(char)
                 else:
                     if len(stack) == 0:
@@ -31,6 +31,4 @@ class Solution(object):
                                 stack.pop()
                             else:
                                 return False
-            if len(stack) > 0:
-                return False
-            return True
+            return len(stack) == 0
