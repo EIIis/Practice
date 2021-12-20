@@ -5,6 +5,13 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        s = sorted(s)
+        t = sorted(t)
+        if s == t:
+            return True
+        else:
+            return False
+        '''
         if len(s) != len(t):
             return False
         allLetter = {}
@@ -24,3 +31,4 @@ class Solution(object):
                     del allLetter[letter]
                     
         return True
+        '''
