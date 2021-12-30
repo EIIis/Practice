@@ -10,8 +10,8 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
+        # O(n) runtime, o(n) time comp
         seen = set()
-        
         while head != None:
             if head in seen:
                 return True
